@@ -123,58 +123,19 @@
 
 //  !   ДЗ 18. Functions 2
 
-//     Написать функцию, которая принимает как аргумент(параметр) два массива и сравнивает суммы всех ЧИСЛОВЫХ элементов.
+//     Написать функцию, которая принимает как аргумент(параметр)
+//     два массива и сравнивает суммы всех ЧИСЛОВЫХ элементов.
 //     Тот массив, сумма которого большая – должен вернутся функцией.
 
 //     Пример:
 // a = [1, 2, 3, 'hello', 4, 5] => summA = 15
 // b = [1, 2, 3, true, 4, undefined, 6] => summB = 16
 
-// if (summA < summB) => return b
-// debugger;
-// let a = [1, 2, 3, 'hello', 4, 5];
-// let b = [1, 2, 3, true, 4, undefined, 6];
-
-// function comparesArrays(arr_1, arr_2) {
-//     // debugger;
-// let newA = [];
-
-// for (let i = 0; i < arr_1.length; i++) {
-//     if ((typeof arr_1[i]) === "number") {
-//         newA.push(arr_1[i]);
-//     }
-// }
-// let newB = [];
-// for (let i = 0; i < arr_2.length; i++) {
-//     if ((typeof arr_2[i]) === "number") {
-//         newB.push(arr_2[i]);
-//     }
-// }
-// let summA = 0;
-// for (let i = 0; i < newA.length; i++) {
-// summA = summA + newA[i];
-// }
-// let summB = 0;
-// for (let i = 0; i < newB.length; i++) {
-// summB = summB + newB[i];
-// }
-
-// let result = "";
-// if(summA >= summB) {
-//     result = a;
-// } else {
-//     result = b;
-// }
-// return result;
-// }
-
-// console.log(comparesArrays(a, b));
 // !!!!!!!!!!!!!
 // let a = [1, 2, 3, 'hello', 4, 5];
 // let b = [1, 2, 3, true, 4, undefined, 6];
 
 // function comparesArrays(arr_1, arr_2) {
-
 //     let newA = [];
 //     let newB = [];
 
@@ -185,7 +146,6 @@
 //         for (let i = 0; i < bigLengthArr; i++) {
 //             if ((typeof arr[i]) === "number") {
 //                 arrNumber.push(arr[i]);
-
 //             }
 //         }
 //         return arrNumber;
@@ -195,7 +155,6 @@
 
 //     let summA = 0;
 //     let summB = 0;
-
 //     function summNumber(arr) {
 //         let summ = 0;
 //         for (let i = 0; i < arr.length; i++) {
@@ -203,7 +162,6 @@
 //         }
 //         return summ;
 //     }
-
 //     summA = summNumber(newA);
 //     summB = summNumber(newB);
 
@@ -215,7 +173,6 @@
 //     }
 //     return result;
 // }
-
 // console.log(comparesArrays(a, b));
 // !!!!!!!!!!!!!
 
@@ -246,9 +203,26 @@
 //         return a;
 //     }
 // }
-
 // console.log(comparison(a, b));
-// !!!!!!!!!!!!!
+// !!!!!!!!!!!!! СУПЕР решение
+// const a = [1, 4, 3, 'hello', 10, 5];
+// const b = [1, 1, 3, true, 5, undefined, 6];
+
+// function getSumOfNumber(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === "number") sum = sum + arr[i];
+//     }
+//     return sum;
+// }
+
+// function getBiggerArray(arr1, arr2) {
+//     const sumA = getSumOfNumber(arr1);
+//     const sumB = getSumOfNumber(arr2);
+
+//     return sumA > sumB ? arr1 : arr2;
+// }
+// console.log(getBiggerArray(a, b));
 
 //     ! ДЗ 19. Functions 3
 
