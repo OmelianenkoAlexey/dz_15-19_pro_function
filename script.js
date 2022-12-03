@@ -114,7 +114,7 @@
 // }
 // function main(a = 2, b = 3, c) {
 //     if (typeof c === "function") {
-//         return c = sum(a, b);
+//         return sum(a, b);
 //     } else {
 //         return c;
 //     }
